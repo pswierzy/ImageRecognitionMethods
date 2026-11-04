@@ -4,10 +4,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pywt
 
-script_dir = os.path.dirname(os.path.abspath(__file__))
-image_path = os.path.join(script_dir, 'lena.jpg')
-
 def load_emojis(folder_name="emojis"):
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    script_dir = os.path.join(script_dir, "..")
     folder_path = os.path.join(script_dir, folder_name)
     if not os.path.isdir(folder_path):
         raise FileNotFoundError(f"Nie znaleziono folderu z emoji: {folder_path}")

@@ -73,6 +73,7 @@ plt.show()
 
 # wczytanie emoji
 def load_emojis(folder_name="emojis"):
+    script_dir = os.path.join(script_dir, "..")
     folder_path = os.path.join(script_dir, folder_name)
     if not os.path.isdir(folder_path):
         raise FileNotFoundError(f"Nie znaleziono folderu z emoji: {folder_path}")
